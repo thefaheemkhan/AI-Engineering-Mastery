@@ -24,11 +24,8 @@ Each section includes:
 
 ---
 
----
 
----
 
----
 
 # **📌 Phase 1: Prerequisites**
 
@@ -174,11 +171,8 @@ Each section includes:
 
 ---
 
----
 
----
 
----
 
 # **📌 Phase 2: Core AI Mastery**
 
@@ -438,11 +432,8 @@ Each section includes:
 
 ---
 
----
 
----
 
----
 
 # **📌 Phase 3: Specialization**
 
@@ -651,11 +642,8 @@ Each section includes:
 
 ---
 
----
 
----
 
----
 
 # **📌 Phase 4: Industry-Level Projects or Startups**
 
@@ -665,6 +653,6 @@ Each section includes:
 
 ## 🔹 *Building (EnigmaX Lab) Industry-wise AI Solutions*
 
-[EnigmaX Labs (1)](https://www.notion.so/EnigmaX-Labs-1-1db3fa0939d0807f8f16dc47a0b4b5fd?pvs=21)
+[EnigmaX Labs (2)](https://www.notion.so/EnigmaX-Labs-1-1db3fa0939d0807f8f16dc47a0b4b5fd?pvs=21)
 
 ---
