@@ -22,14 +22,12 @@ Each section includes:
 
 🔧 **Tools & Libraries to Master**
 
----
 
+---
 # **📌 Phase 1: Prerequisites**
-
 ---
 
-## 🔹 **Step 1: Python for AI & Data Science (Enhanced Plan)**
-
+## 🔹 **Step 1: Python for AI & Data Science**
 
 ### 📖 **Topics to Learn**
 
@@ -139,9 +137,7 @@ Each section includes:
 
 ---
 
-## 🔹 **Step 2: Mathematics for Machine Learning (Enhanced Plan)**
-
----
+## 🔹 **Step 2: Mathematics for Machine Learning**
 
 ### 📖 **Topics to Learn**
 
@@ -263,9 +259,7 @@ Implement and compare various optimizers on a toy neural network for classificat
 
 ---
 
-## 🔹 **Step 3: Machine Learning Fundamentals (Enhanced Plan)**
-
----
+## 🔹 **Step 3: Machine Learning Fundamentals**
 
 ### 📖 **Topics to Learn**
 
