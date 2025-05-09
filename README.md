@@ -1,6 +1,5 @@
-# Mission AI Internship & JOB
 
-# **📌 AI Mastery Roadmap (Learning in Public)**
+# **📌 AI/ML Mastery Roadmap (Learning in Public)**
 
 This roadmap **systematically builds your AI expertise** from the ground up, covering:
 
