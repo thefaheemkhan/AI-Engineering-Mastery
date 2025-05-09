@@ -388,7 +388,650 @@ Use a public dataset (e.g., Titanic, House Prices, Tabular Playground, or custom
 ✔ `MLflow` (optional) – Track experiments and manage ML lifecycle
 
 ---
+# **📌 Phase 2: Core AI Mastery**
+---
 
+# 🔹 **Step 4: Deep Learning Foundations – Artificial Neural Networks (ANNs), Optimization & Deployment**
+
+---
+
+## 📖 **Core Topics to Learn (Expanded)**
+
+✅ **Neurons & Activation Functions**
+
+• ReLU, Sigmoid, Tanh, Softmax, Leaky ReLU, ELU, GELU
+
+• Derivatives, vanishing/exploding gradients, saturation behavior
+
+• Impact of non-linearity on deep networks
+
+✅ **Backpropagation & Gradient Descent**
+
+• Manual derivation of gradients using chain rule
+
+• Graph-based computation vs symbolic differentiation
+
+• Link to automatic differentiation (PyTorch, JAX, TensorFlow)
+
+✅ **Loss Functions & Objective Design**
+
+• Cross-Entropy, MSE, MAE, Huber, Focal Loss (for imbalanced datasets)
+
+• Contrastive loss & Triplet loss (for future vision/NLP tasks)
+
+• Custom loss function design for advanced use-cases
+
+✅ **Optimization Algorithms & Regularization**
+
+• SGD, Momentum, Nesterov, RMSprop, Adam, AdamW, AdaGrad
+
+• L1/L2 regularization, Dropout, Early Stopping, Gradient Clipping
+
+• Warm restarts, Cosine Annealing, OneCycle Scheduler
+
+✅ **Weight Initialization & Normalization**
+
+• Xavier, He/Kaiming Initialization
+
+• BatchNorm, LayerNorm, GroupNorm, WeightNorm
+
+• Impact of normalization on model stability & training speed
+
+✅ **Advanced Training Techniques**
+
+• Learning Rate Finder
+
+• Gradient Accumulation for large models
+
+• Mixed-Precision Training (AMP with FP16 for speed/memory efficiency)
+
+• Transfer Learning & Fine-Tuning (ImageNet/MNIST → custom data)
+
+✅ **Debugging Neural Networks (New Addition)**
+
+• Activation Histograms
+
+• Gradient Flow Diagnostics (vanishing/exploding)
+
+• Visualizing Weights & Feature Maps
+
+• Common failure modes & fixes (e.g., model not learning, overfitting, underfitting)
+
+---
+
+## 🛠️ **Mini-Projects (Reinforced with Visual & Practical Tools)**
+
+🔹 **Neural Network from Scratch**
+
+→ Use NumPy to build 3-layer NN → add ReLU, Sigmoid, Softmax
+
+→ Train on XOR & Iris datasets
+
+→ Plot loss curves manually
+
+🔹 **Train FFNN on MNIST (with Optimizer Experiments)**
+
+→ Use Keras/PyTorch
+
+→ Compare optimizers: SGD vs Adam vs RMSprop
+
+→ Add dropout, L2 regularization, and visualize performance
+
+🔹 **Activation Function Visualizer**
+
+→ Create interactive dashboard using Plotly or Streamlit
+
+→ Compare function shapes, derivatives, and convergence impact
+
+🔹 **Optimizer Playground**
+
+→ Grid of runs with various optimizers & LR schedules
+
+→ Use **TensorBoard** or **Weights & Biases (wandb.ai)** to track experiments
+
+🔹 **XOR Classification App**
+
+→ Visualize decision boundaries as training progresses
+
+→ Try deeper models with different inits/activations
+
+---
+
+## 🚀 **Milestone Project: Digit Recognition + Deployment Pipeline**
+
+🔹 **Goal**: Build a real-world DL pipeline with UI & deployment
+
+**Steps:**
+
+1. Train a classifier on MNIST/CIFAR using Keras or PyTorch
+2. Evaluate model with TensorBoard + WandB visualizations
+3. Convert model to **ONNX / TensorFlow Lite**
+4. Build a UI in **Streamlit** or **Gradio**
+5. Add **drag-and-drop input** for handwritten digits
+6. Deploy on **Hugging Face Spaces**, **Render**, or **Heroku**
+7. Write a blog post/documentation (build portfolio)
+
+💡 Bonus: Add an "explainability" tab using SHAP or saliency maps
+
+---
+
+## 🔧 **Tools & Frameworks to Master**
+
+✔ **TensorFlow / Keras** – Quick prototyping & TFLite conversion
+
+✔ **PyTorch** – Custom training loops, deeper flexibility
+
+✔ **NumPy** – Foundation for building networks from scratch
+
+✔ **OpenCV** – Preprocessing images (thresholding, filtering)
+
+✔ **Streamlit / Flask / Gradio** – Model deployment with UI
+
+✔ **TensorBoard & Weights & Biases (wandb)** – Experiment tracking
+
+✔ **ONNX / TFLite / TorchScript** – Model optimization & deployment
+
+---
+
+## 📜 **Key Papers (Expanded List)**
+
+1. **LeCun et al. (1989)** – Backprop for handwritten digit recognition
+2. **Glorot & Bengio (2010)** – Fixing deep network training via better init
+3. **Kingma & Ba (2014)** – Adam optimizer
+4. **Ioffe & Szegedy (2015)** – BatchNorm for training stability
+5. **Understanding Deep Learning Requires Rethinking Generalization** – Zhang et al. (2017)
+    
+    → Shows how deep nets can memorize data and still generalize
+    
+6. **Visualizing and Understanding Neural Networks** – Zeiler & Fergus (2014)
+    
+    → Introduces deconvolution to interpret CNNs
+    
+
+---
+
+## 🧠 **What You’ll Achieve by the End**
+
+✅ Confidence to build deep neural networks from scratch and with frameworks
+
+✅ Hands-on experience with training, optimizing, debugging, and deploying models
+
+✅ Portfolio-ready full-stack DL project with deployment
+
+✅ Research paper familiarity and industry-grade training tools
+
+✅ Prepared to dive into **CNNs, RNNs, Transformers, GANs, and LLMs**
+
+---
+
+---
+
+# 🔹 Step 5: Mastering Computer Vision with CNNs – Architectures, Detection, Segmentation, and Deployment
+
+---
+
+## 📖 **Core Topics to Learn (Expanded)**
+
+✅ **CNN Foundations & Operations**
+
+• Convolutions (filters, stride, padding)
+
+• Pooling (max, avg, global)
+
+• Activation Maps & Receptive Fields
+
+• BatchNorm, Dropout, LayerNorm
+
+• Padding strategies & dilation
+
+✅ **Modern CNN Architectures**
+
+• LeNet, AlexNet, VGG
+
+• **ResNet** (skip connections, deep stability)
+
+• **EfficientNet** (scaling rules, compound scaling)
+
+• **MobileNetV2/V3**, **SqueezeNet**, **GhostNet** (lightweight & edge-ready)
+
+• **ConvNeXt** (CNNs reimagined with Transformer-like performance)
+
+✅ **Object Detection**
+
+• YOLOv8 (anchor-free), YOLO-NAS (for performance), SSD, Faster R-CNN
+
+• Region Proposal Networks (RPNs), bounding box regression, NMS
+
+• Anchor boxes, IoU, confidence scores
+
+• Fine-tuning detection models on custom datasets
+
+✅ **Image Segmentation**
+
+• **Semantic vs. Instance vs. Panoptic Segmentation**
+
+• U-Net (medical), Mask R-CNN (instance), DeepLabV3+ (semantic)
+
+• Binary vs multi-class segmentation masks
+
+• Evaluation metrics: Dice, IoU, Pixel Accuracy
+
+✅ **Visual Explainability & Model Debugging**
+
+• **Grad-CAM**, **Score-CAM**, Saliency Maps
+
+• Feature map visualization to understand spatial attention
+
+• Error analysis techniques (false positives/negatives)
+
+✅ **Data Handling & Augmentations**
+
+• Albumentations, ImgAug, custom pipelines
+
+• Random crop, rotate, color jitter, mixup, cutmix
+
+• Domain adaptation: Transfer Learning & Feature Extraction
+
+• Dataset balancing & annotation tools (LabelImg, Roboflow)
+
+✅ **Self-Supervised & Contrastive Learning (Optional but Advanced)**
+
+• SimCLR, MoCo, BYOL (for image embeddings without labels)
+
+• Applications in limited-label or unsupervised settings
+
+✅ **Edge Deployment + Real-Time Systems**
+
+• TensorRT, ONNX, TFLite for edge optimization
+
+• Model quantization & pruning
+
+• Stream processing via OpenCV/MediaPipe
+
+• Jetson Nano, Coral TPU, Raspberry Pi deployment
+
+---
+
+## 🛠️ **Mini-Projects (Hands-On Learning with Depth)**
+
+🔹 **Train CNN from Scratch (Cats vs Dogs / CIFAR-10)**
+
+→ Visualize filters, activation maps
+
+→ Compare performance with VGG/ResNet
+
+🔹 **Transfer Learning: ResNet / VGG / EfficientNet**
+
+→ Fine-tune on custom data (flowers, cars, X-ray, etc.)
+
+→ Use with frozen layers vs. full finetuning
+
+🔹 **Object Detection using YOLOv8**
+
+→ Annotate a custom dataset
+
+→ Train, evaluate, and deploy via OpenCV live feed
+
+→ Track FPS & latency in real-time
+
+🔹 **Face Recognition System (DeepFace or FaceNet)**
+
+→ Generate embeddings using CNN
+
+→ Match input faces via cosine similarity
+
+→ Add liveness detection with OpenCV
+
+🔹 **Medical Image Segmentation with U-Net**
+
+→ DICOM/NIFTI image preprocessing
+
+→ Train on lung/cell/tumor segmentation datasets
+
+→ Evaluate with Dice Score & overlay masks
+
+🔹 **Visualize Grad-CAM for a CNN**
+
+→ Show attention maps on misclassified samples
+
+→ Build insight into model interpretability
+
+---
+
+## 🚀 **Milestone Project: AI-Powered Smart Camera with Real-Time Detection & Dashboard**
+
+🔹 **Objective**: Build a real-time smart vision system for real-world applications
+
+🔹 **Pipeline:**
+
+1. **Train a YOLOv8/YOLO-NAS** model on real-world objects/actions
+2. Integrate with **OpenCV** to detect from webcam feed
+3. Add **pose estimation** (e.g., MediaPipe / MMPose)
+4. Add **alert triggers** based on detection logic
+5. Optimize & convert model to **ONNX / TFLite**
+6. Deploy on **Jetson Nano**, **Raspberry Pi**, or **Android app**
+7. Develop a **Streamlit or React Dashboard** to monitor in real time
+8. Include **explainability tab**: Grad-CAM & feature visualizations
+9. Optional: Add **cloud storage** of frames/logs using Firebase/S3
+
+---
+
+## 🔧 **Tools & Libraries to Master**
+
+✔ **TensorFlow/Keras & PyTorch** – Model building, training
+
+✔ **YOLOv5/v8**, **Detectron2**, **MMDetection** – Advanced object detection
+
+✔ **Albumentations, ImgAug** – Data augmentation
+
+✔ **OpenCV, MediaPipe, scikit-image** – Image preprocessing & real-time processing
+
+✔ **Streamlit / Gradio / Flask / FastAPI** – Frontend for demos & deployment
+
+✔ **ONNX, TensorRT, TFLite** – Edge optimization
+
+✔ **LabelImg, CVAT, Roboflow** – Dataset creation & annotation
+
+✔ **Weights & Biases / TensorBoard** – Training visualization
+
+✔ **Grad-CAM, TorchExplain, Captum** – Model explainability
+
+---
+
+## 📜 **Prominent Papers to Learn & Implement**
+
+1. **LeNet-5** – LeCun et al. (1998) – CNN foundations
+2. **AlexNet** – Krizhevsky et al. (2012) – Deep CNN breakthrough
+3. **ResNet** – He et al. (2015) – Skip connections, deep training
+4. **YOLO** – Redmon et al. (2016–2023) – Real-time object detection
+5. **Faster R-CNN** – Ren et al. (2015) – RPN-based detection
+6. **Mask R-CNN** – He et al. (2017) – Instance segmentation
+7. **U-Net** – Ronneberger et al. (2015) – Biomedical image segmentation
+8. **EfficientNet** – Tan & Le (2019) – Efficient scaling of CNNs
+9. **Grad-CAM** – Selvaraju et al. (2017) – Explainability for CNNs
+10. **ConvNeXt** – Liu et al. (2022) – CNNs competing with Transformers
+
+---
+
+## 🧠 **By the End of This Step, You'll Be Able To:**
+
+✅ Build, train, and deploy CNNs for classification, detection, and segmentation
+
+✅ Understand real-world CV systems and deploy them to edge devices
+
+✅ Interpret CNN predictions using visualization tools
+
+✅ Handle your own datasets from scratch: labeling, preprocessing, augmentation
+
+✅ Optimize models for real-time speed and low latency
+
+✅ Be ready to explore Vision Transformers, Multimodal AI, and Video Understanding
+
+---
+
+---
+
+## 🔹 **Step 6: RNNs, Transformers & LLMs (Large Language Models)**
+
+---
+
+### 📖 **Core Topics to Learn**
+
+### ✅ **1. Foundations of Sequence Modeling**
+
+- Understand **RNNs**, **LSTMs**, and **GRUs**: internal mechanics, vanishing gradients, backpropagation through time (BPTT).
+- Explore use cases: text classification, language modeling, time-series prediction.
+- Limitations of RNNs in long-sequence understanding.
+
+### ✅ **2. The Rise of Attention & Transformers**
+
+- **Attention Mechanism**: Concept, intuition, and implementation.
+- **Self-Attention** vs. regular attention – how Transformers revolutionized sequence modeling.
+- **Positional Encoding**, **Multi-Head Attention**, **Feedforward Blocks**, **Residual Connections**.
+
+### ✅ **3. Transformer Architectures**
+
+- **Encoder-only** (BERT), **Decoder-only** (GPT), and **Encoder-Decoder** (T5, BART) models.
+- How architecture impacts performance and use cases.
+
+### ✅ **4. Inside Large Language Models**
+
+- Compare major families: **BERT**, **GPT**, **T5**, **LLaMA**, **Mistral**, **Claude**, **Gemini**, **Mixtral**, etc.
+- Understand **pretraining vs. fine-tuning**, **causal vs. masked LM**, **autoregressive decoding**.
+
+### ✅ **5. LLM Tuning & Customization**
+
+- Prompt Engineering: **Zero-shot**, **few-shot**, **CoT prompting**, **system vs. user messages**.
+- Fine-tuning with **PEFT**, **LoRA**, **QLoRA**, and **Adapters**.
+- Transfer learning vs. instruction tuning.
+
+### ✅ **6. Efficient Inference & Deployment**
+
+- Quantization: **8-bit**, **4-bit (GPTQ, AWQ)**, **GGUF**.
+- Tools for deploying LLMs on local/edge devices (e.g., Ollama, llama.cpp, TFLite).
+- Streaming, batching, and optimizing LLM latency.
+
+---
+
+### 🛠️ **Mini-Projects (Hands-on, Focused Learning)**
+
+🔹 **LSTM-Based Text Generator**
+
+Generate Shakespeare-like poetry or song lyrics using an LSTM trained on text corpora.
+
+🔹 **Fine-Tune BERT for Sentiment Analysis**
+
+Train a sentiment classifier on IMDb/Twitter using Hugging Face `Trainer` API.
+
+🔹 **Fine-Tune GPT-3.5 on Domain Data**
+
+Use OpenAI API to train on support tickets, legal documents, or product FAQs.
+
+🔹 **Prompt Engineering Toolkit**
+
+Build a system to test various prompts on GPT-4 with evaluation metrics (BLEU, ROUGE, factuality).
+
+🔹 **T5 for Summarization & Translation**
+
+Fine-tune T5 on summarizing news articles or translating between Indian languages.
+
+🔹 **Quantize & Deploy LLaMA 2 Locally**
+
+Convert to GGUF format and run on CPU/GPU using `llama.cpp`, optimized for inference speed.
+
+---
+
+### 🚀 **Milestone Project – Build Your Own LLM-Powered Chatbot**
+
+🔹 **Project Title**: *"Domain-Specialized AI Assistant (Deployed + Scalable)"*
+
+### 🔨 Components:
+
+- 🔧 **Model**: Fine-tune **LLaMA 2**/**Mistral**/**Gemma**/**T5** on your domain (e.g., medicine, law, finance, code).
+- 🧠 **Memory**: Add **LangChain + Vector DB** (FAISS/Chroma) for context-aware retrieval.
+- 🌐 **Interface**: Build an interactive chatbot using **Streamlit** or **Gradio**.
+- ⚙️ **Fallback Logic**: If local model fails, route to **GPT-4 via OpenAI API**.
+- 🪄 **Optimization**: Quantize for on-device use (Jetson Nano, Mac M1, Raspberry Pi).
+- 📊 **Analytics Dashboard**: Visualize user queries, token usage, latency using Plotly/Streamlit/Prometheus.
+- 🔈 **Optional**: Add voice I/O with **Whisper + Bark/TTS** for a voice assistant experience.
+
+---
+
+### 🔧 **Tools & Libraries to Master**
+
+| Area | Libraries & Tools |
+| --- | --- |
+| **Model Training** | Hugging Face Transformers, PyTorch, TensorFlow |
+| **LLM Deployment** | OpenAI API, llama.cpp, Ollama, Hugging Face Spaces |
+| **Fine-Tuning** | PEFT, LoRA, QLoRA, bitsandbytes |
+| **Retrieval-Augmented Generation (RAG)** | LangChain, FAISS, ChromaDB, Weaviate |
+| **Web & UI** | Gradio, Streamlit, Flask |
+| **Inference Optimization** | GGUF, GPTQ, AWQ, DeepSpeed, ONNX |
+| **Prompt Engineering** | Guidance, PromptLayer, LM Studio |
+
+---
+
+### 🧠 **By the End of This Step, You'll Be Able To:**
+
+✅ Build, train, and deploy **RNNs, LSTMs, and GRUs** for sequential tasks like text generation and time series forecasting.
+
+✅ Understand the architecture of **transformers** and **large language models (LLMs)**, and implement them for tasks like translation, summarization, and text generation.
+
+✅ Fine-tune **BERT**, **GPT**, and **T5** for specific NLP tasks, including domain-specific customizations.
+
+✅ Apply **prompt engineering** to extract better results from LLMs in zero-shot and few-shot learning scenarios.
+
+✅ Optimize **LLM inference** using techniques like **quantization**, **LoRA**, and **PEFT** to run models efficiently on edge devices.
+
+✅ Deploy **transformers** and **LLMs** for real-world applications, understanding their use cases and limitations.
+
+---
+
+### 📜 **Research Papers You Must Read & Implement**
+
+| Paper | Author(s) | Why It Matters |
+| --- | --- | --- |
+| 🔹 *Long Short-Term Memory* (1997) | Hochreiter & Schmidhuber | Foundations of sequence modeling |
+| 🔹 *Attention is All You Need* (2017) | Vaswani et al. | The core of Transformer models |
+| 🔹 *BERT* (2018) | Devlin et al. | Pretrained bidirectional encoder |
+| 🔹 *GPT-3* (2020) | Brown et al. | Prompt-based learning paradigm |
+| 🔹 *T5: Text-to-Text Transfer Transformer* (2020) | Raffel et al. | Unified framework for NLP tasks |
+| 🔹 *RAG* (2020) | Lewis et al. | Retrieval-Augmented Generation for long-form QA |
+| 🔹 *QLoRA* (2023) | Dettmers et al. | Low-RAM fine-tuning of large models |
+| 🔹 *LIMA / ORCA / Zephyr* (2023) | Meta, Microsoft, Hugging Face | Instruction tuning techniques |
+
+---
+
+---
+
+## 🔹 **Step 7: Generative AI (GANs, Autoencoders, Diffusion Models)**
+
+---
+
+### 📖 **Core Topics to Learn**
+
+### ✅ **1. Autoencoders (AEs), Variational Autoencoders (VAEs), and Denoising AEs**
+
+- **Autoencoders**: Learn how they function for dimensionality reduction and data compression.
+- **Variational Autoencoders (VAEs)**: Introduction to probabilistic models for generation and latent space exploration.
+- **Denoising Autoencoders (DAE)**: Training models to reconstruct clean images from noisy inputs, aiding in noise reduction and feature extraction.
+- **Applications**: Anomaly detection, denoising, data generation, compression.
+
+### ✅ **2. Generative Adversarial Networks (GANs)**
+
+- **DCGAN** (Deep Convolutional GAN): Introduction to convolutional networks for image generation.
+- **StyleGAN & StyleGAN2**: Learn how to generate high-quality, realistic images with control over various image attributes (style, features).
+- **CycleGAN**: Image-to-image translation without paired datasets, such as converting horse images to zebras or summer to winter.
+- **Conditional GANs**: Generate images conditioned on labels or external input.
+- **Applications**: Data augmentation, image synthesis, image-to-image translation.
+
+### ✅ **3. Diffusion Models**
+
+- **Stable Diffusion**: Explore how diffusion models have redefined generative art by creating images from noise through a reverse diffusion process.
+- **DALL·E**: Generate images from textual descriptions, bridging the gap between vision and language.
+- **Applications**: AI art, creative industries, conditional generation.
+
+### ✅ **4. Self-Supervised Learning & Representation Learning**
+
+- **SimCLR**: Contrastive learning approach for visual representation learning.
+- **MoCo**: Momentum Contrast, optimizing representation learning without labels.
+- **BYOL**: Bootstrap Your Own Latent, self-supervised learning method that focuses on optimizing an encoder network.
+- **Applications**: Learning useful representations without labeled data, pretraining for vision tasks.
+
+### ✅ **5. Latent Space Manipulation**
+
+- **Latent Space Exploration**: Investigate how GANs and VAEs encode information in latent space and how manipulation can lead to various outputs (e.g., interpolating between images, controlling image attributes).
+- **Latent Space Interpolation**: Create smooth transitions between images to explore data transformations and novel image synthesis.
+
+---
+
+### 🛠️ **Mini-Projects (Hands-on, Focused Learning)**
+
+🔹 **Autoencoder for Image Denoising**
+
+Train an autoencoder to remove noise from CIFAR-10 or MNIST images and visualize how the model reconstructs the input.
+
+🔹 **Variational Autoencoder (VAE) for Image Generation**
+
+Train a VAE to generate images similar to a given dataset (e.g., faces, handwritten digits).
+
+🔹 **DCGAN for Handwritten Digit Generation**
+
+Train a DCGAN on MNIST to generate handwritten digits that resemble the real data distribution.
+
+🔹 **CycleGAN for Image Translation**
+
+Implement CycleGAN to perform tasks such as converting photos of horses to zebras or transforming summer images to winter landscapes.
+
+🔹 **Fine-Tune Stable Diffusion for Custom AI Art**
+
+Train Stable Diffusion on a custom dataset (e.g., anime, product designs, portraits) to generate personalized artworks.
+
+🔹 **StyleGAN2 for Realistic Face Generation**
+
+Train StyleGAN2 on CelebA dataset to generate hyper-realistic human faces, then manipulate latent space to alter features (e.g., age, expression, hairstyle).
+
+---
+
+### 🚀 **Milestone Project – AI-Powered Art & Image Generator**
+
+🔹 **Project Title**: *"Next-Generation AI Art Generator Using GANs & Diffusion Models"*
+
+### 🔨 Components:
+
+- 🎨 **Model Training**: Train a **StyleGAN2** to generate realistic artwork or faces and fine-tune **Stable Diffusion** for a specific art style or theme.
+- 🌐 **Web Deployment**: Develop a user-friendly app using **Streamlit** or **Gradio** for generating AI-powered art in real time.
+- 🎭 **Latent Space Exploration**: Implement **latent space interpolation** to allow users to generate smooth transitions between images or manipulate generated content.
+- 🖼️ **AI Image Editing**: Incorporate **Inpainting** and **Outpainting** using **GANs**/ **Diffusion Models** to allow users to modify or expand images creatively.
+- 🚀 **Custom Art Generation**: Allow users to customize the art generation process (e.g., selecting themes, color palettes, or subject matter).
+
+---
+
+### 🔧 **Tools & Libraries to Master**
+
+| Area | Tools & Libraries |
+| --- | --- |
+| **Deep Learning Frameworks** | TensorFlow, Keras, PyTorch |
+| **Generative Models** | StyleGAN2, CycleGAN, DCGAN |
+| **Diffusion Models** | Stable Diffusion, DALL·E |
+| **Hugging Face Models** | Hugging Face Diffusers (for fine-tuning diffusion models) |
+| **Image Processing & Augmentation** | OpenCV, PIL, Albumentations |
+| **Web Deployment** | Gradio, Streamlit |
+| **Data Handling** | NumPy, Pandas, Datasets from Hugging Face |
+| **Model Optimization** | ONNX, TensorRT, GPU/TPU acceleration |
+
+---
+
+### 🧠 **By the End of This Step, You'll Be Able To:**
+
+✅ Build and train **Autoencoders**, **Variational Autoencoders (VAEs)**, and **GANs** for tasks like image denoising, data generation, and image-to-image translation.
+
+✅ Implement **StyleGAN2** and **DCGAN** for high-quality image generation, including manipulating latent space for control over output images.
+
+✅ Use **CycleGAN** for **image-to-image translation** tasks, such as transforming photos between different styles (e.g., summer to winter).
+
+✅ Fine-tune **Stable Diffusion** and **DALL·E** for creating custom AI art based on specific themes, styles, or input data.
+
+✅ Understand the principles behind **Self-Supervised Learning** and use techniques like **SimCLR**, **MoCo**, and **BYOL** for efficient representation learning.
+
+✅ Optimize generative models for real-time image synthesis and manipulation, and deploy them for interactive use.
+
+---
+
+### 📜 **Prominent Papers to Learn & Implement**
+
+| Paper | Author(s) | Why It's Important |
+| --- | --- | --- |
+| 🔹 *Autoencoding Variational Bayes (VAE)* | Kingma & Welling (2013) | Foundation for probabilistic generative models |
+| 🔹 *Generative Adversarial Networks (GANs)* | Ian Goodfellow et al. (2014) | Introduction to GANs and their generative power |
+| 🔹 *Unsupervised Representation Learning with Deep Convolutional GANs (DCGAN)* | Radford et al. (2015) | First successful use of GANs in image generation |
+| 🔹 *StyleGAN: A Style-Based Generator Architecture for Generative Adversarial Networks* | Karras et al. (2018) | Breakthrough in generating high-quality, controllable images |
+| 🔹 *High-Resolution Image Synthesis with Latent Diffusion Models* | Rombach et al. (2022) | A revolutionary approach for efficient image synthesis |
+| 🔹 *Generative Pretrained Transformer (GPT-3)* | Brown et al. (2020) | Extends the transformer approach to large-scale, unstructured text generation |
+| 🔹 *Image-to-Image Translation with Conditional Adversarial Networks (Pix2Pix)* | Isola et al. (2017) | Foundation for image-to-image translation tasks |
+| 🔹 *The Unreasonable Effectiveness of Deep Learning in AI Art* | Various Authors | Discusses how deep learning models like GANs can generate art at scale |
+
+---
 
 
 --- 
