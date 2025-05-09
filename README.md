@@ -1034,11 +1034,11 @@ Train StyleGAN2 on CelebA dataset to generate hyper-realistic human faces, then 
 ---
 
 
-
-## 📌 **Phase 3: Specialization**
-
+---
+# 📌 **Phase 3: Specialization**
+---
 ### 🔹 **Advanced Computer Vision (CS231n & Beyond)**
-
+---
 ### 📖 **Topics to Learn**
 
 - **Advanced CNN Architectures**
