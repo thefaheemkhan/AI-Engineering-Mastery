@@ -30,7 +30,6 @@ Each section includes:
 
 ## 🔹 **Step 1: Python for AI & Data Science (Enhanced Plan)**
 
----
 
 ### 📖 **Topics to Learn**
 
