@@ -1,5 +1,5 @@
 
-# **📌 Artificial Intelligence /Machine Learning Project-Based Mastery Roadmap**
+# **📌 AI/ML Project-Based Mastery Roadmap**
 
 This roadmap **systematically builds your AI expertise** from the ground up, covering:
 
