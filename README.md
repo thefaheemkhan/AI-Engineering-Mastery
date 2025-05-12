@@ -1,5 +1,5 @@
 
-# **📌 AI/ML Project-Based Mastery Roadmap (Learning in Public Series)**
+# **📌 AI/ML Project-Based Mastery Roadmap**
 
 This roadmap **systematically builds your AI expertise** from the ground up, covering:
 
