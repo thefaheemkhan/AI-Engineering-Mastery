@@ -25,7 +25,7 @@ Each section includes:
 
 
 ---
-# **📌 Phase 1: Prerequisites **
+# **📌 Phase 1: Prerequisites** 
 ---
 
 ## 🔹 **Step 1: Python for AI & Data Science**
