@@ -21,6 +21,8 @@ Each section includes:
 
 🔧 **Tools & Libraries to Master**
 
+🛠️ **Papers to Read**
+
 
 ---
 # **📌 Phase 1: Prerequisites **
