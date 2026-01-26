@@ -23,14 +23,14 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - Statistics for ML
 
 
-#### 2️⃣ ** Machine Learning **
+#### 2️⃣ **Machine Learning**
 
 - Classical ML
 - Supervised learning
 - Unsupervised learning
 - Reinforcement learning
 
-### 3️⃣ ** Deep Learning **
+### 3️⃣ **Deep Learning**
 
 - Neural intelligence
 - Neural Networks Fundamentals
@@ -39,7 +39,7 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - RNN, LSTM, GRU
 - NLP basics
 
-### 4️⃣ ** Transformers & LLMs **
+### 4️⃣ **Transformers & LLMs**
 
 - Modern AI backbone
 - Attention mechanism
@@ -48,7 +48,7 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - Large Language Models
 - Fine-tuning & inference
 
-### 5️⃣ ** Generative AI **
+### 5️⃣ **Generative AI**
 
 - Creation systems
 - Text, image, and multimodal generation
@@ -57,7 +57,7 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - RAG systems
 - Embeddings & vector databases
 
-### 6️⃣ ** AI Engineering & Deployment **
+### 6️⃣ **AI Engineering & Deployment**
 
 - Production mindset
 - Model serving
@@ -66,7 +66,7 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - Monitoring, logging, versioning
 - Performance, cost & scalability
 
-### 7️⃣ ** AI Agents & Automation **
+### 7️⃣ **AI Agents & Automation**
 
 - Autonomous systems
 - Tool-using agents
@@ -75,7 +75,7 @@ This roadmap **systematically builds your AI expertise** from the ground up, cov
 - Workflow automation
 - Orchestration frameworks
 
-### 8️⃣ ** Practical Paper Implementation **
+### 8️⃣ **Practical Paper Implementation**
 
 - Research → real world
 - Reading ML/AI papers
