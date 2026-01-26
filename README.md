@@ -1,14 +1,15 @@
 
 # **📌 AI Engineering Mastery Roadmap**
 
-## **📌 Phase 1: ML Primer ** 
-## **📌 Phase 2: Machine Learning ** 
-## **📌 Phase 3: Deep Learning ** 
-## **📌 Phase 4: Transformers & LLMs ** 
-## **📌 Phase 5: Generative AI ** 
-## **📌 Phase 6: AI Engineering & Deployement ** 
-## **📌 Phase 7: AI Agents & Automation ** 
-## **📌 Phase 8: Reimplement Research Papers and Recreate It's Results ** 
+📌 **Phase 1: ML Primer**
+📌 **Phase 2: Machine Learning**
+📌 **Phase 3: Deep Learning**
+📌 **Phase 4: Transformers & LLMs**
+📌 **Phase 5: Generative AI**
+📌 **Phase 6: AI Engineering & Deployment**
+📌 **Phase 7: AI Agents & Automation**
+📌 **Phase 8: Reimplement Research Papers and Recreate Its Results**
+______________________________________________________________________________________
 
 This roadmap **systematically builds your AI expertise** from the ground up, covering:
 
