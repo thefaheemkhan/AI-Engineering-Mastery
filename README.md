@@ -1,5 +1,5 @@
 
-# **📌 AI Engineering Mastery**
+# **📌 AI Engineering Mastery Roadmap**
 
 - 📌 **Phase 1: Machine Learning**
 - 📌 **Phase 2: Deep Learning**
