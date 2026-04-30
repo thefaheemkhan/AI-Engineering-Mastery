@@ -10,6 +10,24 @@
 - 📌 **Phase 7: Reimplement Research Papers and Recreate Their Results**
 ______________________________________________________________________________________
 
+Things that can make my profile outstanding:
+
+1. Open source contribution
+2. Reimplement the paper and recreate its results
+3. Deployed Products
+4. Skills: 
+    ✅ Refined AI Engineer Skills Section
+    1. LLM Engineering: Prompt Engineering, RAG (Retrieval-Augmented Generation), AI Agents, Workflow Automation
+    2. AI Frameworks & Tools: LangChain, LlamaIndex, OpenAI API, Anthropic API
+    3. Model Optimization: Fine-Tuning, PEFT (Parameter-Efficient Fine-Tuning), Model Evaluation & Evals
+    4. MLOps & Infrastructure: LLMOps, Model Deployment, Monitoring & Observability, AI Infrastructure
+    5. AI Systems Design: AI Tool Stacking, End-to-End AI Pipelines, Backend Integration
+    6. Multimodal AI: Text, Image, Audio, Video Models
+    7. AI Applications: AI Coding Assistants, Content Generation Systems
+    8. AI Product & Strategy: AI Product Management, Use-case Design, Automation Solutions
+    9. AI Safety: Alignment, Responsible AI, Output Guardrails
+
+
 
 Skills to Master
 1. Prompt Engineering
