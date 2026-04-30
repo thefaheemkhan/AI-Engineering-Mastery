@@ -12,9 +12,9 @@ ________________________________________________________________________________
 
 Things that can make my profile outstanding:
 
-1. Open source contribution
-2. Reimplement the paper and recreate its results
-3. Deployed Products
+1. Open source contribution - using claude and AI tools learn how to contribute in open source and how to leverage AI tools for this.
+2. Reimplement the paper and recreate its results - Shost list atleast 10 papers that are remarkable and have huge respect, community and applications and then reimplement it from scratch and recreate results and if possible then make some product.
+3. Deployed Products - Make Ai product and deploye for user and Monitor and other CICD, and other sttuff.
 4. Skills: 
     ✅ Refined AI Engineer Skills Section
     1. LLM Engineering: Prompt Engineering, RAG (Retrieval-Augmented Generation), AI Agents, Workflow Automation
