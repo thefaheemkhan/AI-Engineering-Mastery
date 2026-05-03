@@ -19,27 +19,6 @@ List of Resources;
 5. Neural Network, Andrej Karpathy: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 6. Reinforcement Learning CS224R: [Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 1: Class Intro](https://www.youtube.com/watch?v=EvHRQhMX7_w&list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
 
-
-
-
-Things that can make my profile outstanding:
-
-1. Open source contribution - using claude and AI tools learn how to contribute in open source and how to leverage AI tools for this.
-2. Reimplement the paper and recreate its results - Shost list atleast 10 papers that are remarkable and have huge respect, community and applications and then reimplement it from scratch and recreate results and if possible then make some product.
-3. Deployed Products - Make Ai product and deploye for user and Monitor and other CICD, and other sttuff.
-4. Skills: 
-    ✅ Refined AI Engineer Skills Section
-    1. LLM Engineering: Prompt Engineering, RAG (Retrieval-Augmented Generation), AI Agents, Workflow Automation
-    2. AI Frameworks & Tools: LangChain, LlamaIndex, OpenAI API, Anthropic API
-    3. Model Optimization: Fine-Tuning, PEFT (Parameter-Efficient Fine-Tuning), Model Evaluation & Evals
-    4. MLOps & Infrastructure: LLMOps, Model Deployment, Monitoring & Observability, AI Infrastructure
-    5. AI Systems Design: AI Tool Stacking, End-to-End AI Pipelines, Backend Integration
-    6. Multimodal AI: Text, Image, Audio, Video Models
-    7. AI Applications: AI Coding Assistants, Content Generation Systems
-    8. AI Product & Strategy: AI Product Management, Use-case Design, Automation Solutions
-    9. AI Safety: Alignment, Responsible AI, Output Guardrails
-
-
 ------------------------------------------------------------------------------------------------------
 # **Mastering the AI Landscape: Comprehensive Skills Inventory**
 
