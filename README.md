@@ -18,3 +18,4 @@ List of Resources;
 4. CS231N Computer Vision, Fei Fei Li: [(733) Stanford CS231N Deep Learning for Computer Vision | Spring 2025 | Lecture 1: Introduction - YouTube](https://www.youtube.com/watch?v=2fq9wYslV0A&list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16)
 5. Neural Network, Andrej Karpathy: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 6. Reinforcement Learning CS224R: [Stanford CS224R Deep Reinforcement Learning | Spring 2025 | Lecture 1: Class Intro](https://www.youtube.com/watch?v=EvHRQhMX7_w&list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+7. LLMs: https://youtu.be/9vM4p9NN0Ts?si=vs8PWnAWcViNdSoy
