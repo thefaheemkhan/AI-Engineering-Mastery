@@ -2,6 +2,7 @@
 # AI Engineer and Researcher Roadmap
 
 This roadmap consists of three parallel tracks: **Core AI**, **Applied AI**, and **Research**.
+
 Link: https://ai-engineer-researcher-roadmap.netlify.app/
 
 ## How to use this roadmap
