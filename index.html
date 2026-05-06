@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Engineer & Researcher Roadmap</title>
+<meta name="description" content="A 10/10 roadmap for becoming an AI Engineer and Researcher. Three tracks: Core AI, Applied AI, and Research.">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg2: #111118;
+    --bg3: #1a1a26;
+    --bg4: #22223a;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.13);
+    --text: #e8e8f0;
+    --text2: #9090a8;
+    --text3: #5a5a72;
+
+    --purple: #7c6ff7;
+    --purple-bg: rgba(124,111,247,0.1);
+    --purple-bg2: rgba(124,111,247,0.18);
+    --purple-muted: #4a4480;
+
+    --green: #2dd4a0;
+    --green-bg: rgba(45,212,160,0.1);
+    --green-bg2: rgba(45,212,160,0.18);
+    --green-muted: #1a6b52;
+
+    --amber: #f5a623;
+    --amber-bg: rgba(245,166,35,0.1);
+    --amber-bg2: rgba(245,166,35,0.18);
+    --amber-muted: #7a5210;
+
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 80px 24px 60px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 500px;
+    background: radial-gradient(ellipse, rgba(124,111,247,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--purple); background: var(--purple-bg);
+    border: 1px solid rgba(124,111,247,0.3);
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.8rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--text2);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-size: 2rem; font-weight: 800; letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .stat-num.purple { color: var(--purple); }
+  .stat-num.green { color: var(--green); }
+  .stat-num.amber { color: var(--amber); }
+
+  .stat-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+  /* NAV */
+  .nav-wrap {
+    position: sticky; top: 0; z-index: 100;
+    padding: 0 24px;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  .nav-btn {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--text2);
+    font-size: 13px; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-btn:hover { background: var(--bg3); color: var(--text); }
+
+  .nav-btn.active-core { background: var(--purple-bg2); border-color: rgba(124,111,247,0.5); color: var(--purple); }
+  .nav-btn.active-applied { background: var(--green-bg2); border-color: rgba(45,212,160,0.5); color: var(--green); }
+  .nav-btn.active-research { background: var(--amber-bg2); border-color: rgba(245,166,35,0.5); color: var(--amber); }
+
+  .nav-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+  }
+  .nav-btn.active-core .nav-dot { background: var(--purple); }
+  .nav-btn.active-applied .nav-dot { background: var(--green); }
+  .nav-btn.active-research .nav-dot { background: var(--amber); }
+  .nav-btn:not(.active-core):not(.active-applied):not(.active-research) .nav-dot { background: var(--text3); }
+
+  /* PROGRESS */
+  .progress-wrap {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    padding: 24px;
+  }
+
+  .progress-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+  }
+
+  .progress-card-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+  .progress-card-label.purple { color: var(--purple); }
+  .progress-card-label.green { color: var(--green); }
+  .progress-card-label.amber { color: var(--amber); }
+
+  .progress-bar-track { height: 4px; background: var(--bg4); border-radius: 2px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; width: 0%; }
+  .progress-bar-fill.purple { background: var(--purple); }
+  .progress-bar-fill.green { background: var(--green); }
+  .progress-bar-fill.amber { background: var(--amber); }
+
+  .progress-count { font-size: 11px; color: var(--text3); margin-top: 6px; }
+
+  /* MAIN */
+  .main { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* TRACK SECTION */
+  .track-section { display: none; }
+  .track-section.active { display: block; animation: fadeUp 0.3s ease; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .track-header {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 28px 0 24px;
+  }
+
+  .track-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+
+  .track-icon.purple { background: var(--purple-bg2); }
+  .track-icon.green { background: var(--green-bg2); }
+  .track-icon.amber { background: var(--amber-bg2); }
+
+  .track-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+  .track-desc { font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+  /* PHASE CARD */
+  .phase-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .phase-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .phase-card:hover { border-color: var(--border2); }
+  .phase-card.open { border-color: var(--border2); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+
+  .phase-head {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 20px;
+    user-select: none;
+  }
+
+  .phase-num-badge {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+
+  .core .phase-num-badge { background: var(--purple-bg2); color: var(--purple); }
+  .applied .phase-num-badge { background: var(--green-bg2); color: var(--green); }
+  .research .phase-num-badge { background: var(--amber-bg2); color: var(--amber); }
+
+  .phase-head-text { flex: 1; min-width: 0; }
+  .phase-head-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .phase-head-meta { font-size: 12px; color: var(--text3); }
+
+  .phase-head-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+  .done-btn {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 1.5px solid var(--border2);
+    background: transparent;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+    font-size: 11px;
+    color: transparent;
+  }
+
+  .done-btn:hover { border-color: var(--text2); }
+  .done-btn.checked { background: var(--green); border-color: var(--green); color: #fff; }
+  .core .done-btn.checked { background: var(--purple); border-color: var(--purple); }
+  .research .done-btn.checked { background: var(--amber); border-color: var(--amber); }
+
+  .chevron {
+    color: var(--text3); font-size: 16px;
+    transition: transform 0.25s ease;
+    line-height: 1;
+  }
+
+  .phase-card.open .chevron { transform: rotate(90deg); }
+
+  /* PHASE BODY */
+  .phase-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .phase-body-inner { padding: 0 20px 20px; }
+
+  .why-block {
+    font-size: 13px; color: var(--text2); line-height: 1.7;
+    padding: 12px 14px;
+    background: var(--bg3);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid;
+    margin-bottom: 16px;
+  }
+
+  .core .why-block { border-color: var(--purple); }
+  .applied .why-block { border-color: var(--green); }
+  .research .why-block { border-color: var(--amber); }
+
+  .section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text3); margin-bottom: 8px;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .topic-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    transition: border-color 0.15s;
+  }
+
+  .topic-card:hover { border-color: var(--border2); }
+
+  .topic-card-title { font-size: 12px; font-weight: 600; margin-bottom: 3px; color: var(--text); }
+  .topic-card-detail { font-size: 11px; color: var(--text2); line-height: 1.5; }
+
+  .tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+
+  .tag {
+    font-size: 11px; padding: 3px 10px; border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text2); background: var(--bg3);
+    white-space: nowrap;
+  }
+
+  .milestone-block {
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px; line-height: 1.6;
+  }
+
+  .core .milestone-block { background: var(--purple-bg); border: 1px solid rgba(124,111,247,0.2); color: #c4beff; }
+  .applied .milestone-block { background: var(--green-bg); border: 1px solid rgba(45,212,160,0.2); color: #a0f0d8; }
+  .research .milestone-block { background: var(--amber-bg); border: 1px solid rgba(245,166,35,0.2); color: #fcd99a; }
+
+  .milestone-block strong { font-weight: 700; display: block; margin-bottom: 4px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
+
+  /* HOW TO USE SECTION */
+  .howto {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .howto-item { display: flex; gap: 12px; }
+
+  .howto-icon {
+    font-size: 18px; flex-shrink: 0; margin-top: 2px;
+  }
+
+  .howto-title { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+  .howto-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  /* PHASE DONE OVERLAY */
+  .phase-card.completed .phase-head { opacity: 0.6; }
+  .phase-card.completed { border-color: rgba(45,212,160,0.15); }
+  .core .phase-card.completed { border-color: rgba(124,111,247,0.15); }
+  .research .phase-card.completed { border-color: rgba(245,166,35,0.15); }
+
+  /* SEARCH BAR */
+  .search-wrap { margin-bottom: 20px; position: relative; }
+  .search-input {
+    width: 100%; padding: 11px 16px 11px 42px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); color: var(--text);
+    font-size: 14px; outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input::placeholder { color: var(--text3); }
+  .search-input:focus { border-color: var(--border2); }
+  .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text3); font-size: 16px; pointer-events: none; }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 40px 24px;
+    color: var(--text3); font-size: 12px;
+    border-top: 1px solid var(--border);
+    max-width: 900px; margin: 0 auto;
+  }
+
+  footer a { color: var(--purple); text-decoration: none; }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    .hero { padding: 60px 16px 40px; }
+    .hero-stats { gap: 20px; }
+    .main, .nav-inner { padding-left: 16px; padding-right: 16px; }
+    .progress-wrap { padding: 16px; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .topics-grid { grid-template-columns: 1fr 1fr; }
+    .howto { grid-template-columns: 1fr; }
+    .phase-head { padding: 14px 16px; }
+    .phase-body-inner { padding: 0 16px 16px; }
+  }
+
+  /* EXPAND/COLLAPSE ALL */
+  .track-actions { display: flex; gap: 8px; margin-bottom: 16px; }
+  .action-btn {
+    font-size: 12px; color: var(--text2);
+    background: transparent; border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 20px; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .action-btn:hover { background: var(--bg3); color: var(--text); }
+
+  /* SCROLL TO TOP */
+  .to-top {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--bg3); border: 1px solid var(--border2);
+    color: var(--text2); font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.2s;
+    opacity: 0; pointer-events: none;
+    z-index: 50;
+  }
+  .to-top.visible { opacity: 1; pointer-events: auto; }
+  .to-top:hover { background: var(--bg4); color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">⚡ 10/10 Roadmap</div>
+  <h1>AI Engineer &<br>Researcher</h1>
+  <p class="hero-sub">Three parallel tracks. 27 phases. Milestone checkpoints at every stage. Built to take you from zero to frontier-level in 18–24 months.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num purple">11</div>
+      <div class="stat-label">Core AI phases</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num green">10</div>
+      <div class="stat-label">Applied AI phases</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num amber">6</div>
+      <div class="stat-label">Research phases</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <button class="nav-btn active-core" onclick="switchTrack('core')" id="btn-core">
+      <span class="nav-dot"></span> Core AI
+    </button>
+    <button class="nav-btn" onclick="switchTrack('applied')" id="btn-applied">
+      <span class="nav-dot"></span> Applied AI
+    </button>
+    <button class="nav-btn" onclick="switchTrack('research')" id="btn-research">
+      <span class="nav-dot"></span> Research
+    </button>
+  </div>
+</div>
+
+<!-- PROGRESS BARS -->
+<div class="progress-wrap">
+  <div class="progress-card">
+    <div class="progress-card-label purple">Core AI</div>
+    <div class="progress-bar-track"><div class="progress-bar-fill purple" id="prog-core"></div></div>
+    <div class="progress-count" id="prog-core-label">0 / 11 complete</div>
+  </div>
+  <div class="progress-card">
+    <div class="progress-card-label green">Applied AI</div>
+    <div class="progress-bar-track"><div class="progress-bar-fill green" id="prog-applied"></div></div>
+    <div class="progress-count" id="prog-applied-label">0 / 10 complete</div>
+  </div>
+  <div class="progress-card">
+    <div class="progress-card-label amber">Research</div>
+    <div class="progress-bar-track"><div class="progress-bar-fill amber" id="prog-research"></div></div>
+    <div class="progress-count" id="prog-research-label">0 / 6 complete</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- HOW TO USE -->
+  <div class="howto">
+    <div class="howto-item">
+      <div class="howto-icon">🔀</div>
+      <div>
+        <div class="howto-title">Interleave from phase 3</div>
+        <div class="howto-desc">Core AI and Applied AI run in parallel — start building apps at Core phase 3.</div>
+      </div>
+    </div>
+    <div class="howto-item">
+      <div class="howto-icon">🔬</div>
+      <div>
+        <div class="howto-title">Research starts at Core 5</div>
+        <div class="howto-desc">The Research track is a depth layer that runs alongside Core AI, not after it.</div>
+      </div>
+    </div>
+    <div class="howto-item">
+      <div class="howto-icon">✅</div>
+      <div>
+        <div class="howto-title">Check off phases</div>
+        <div class="howto-desc">Hit the circle on any phase to mark it done. Progress saves automatically.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input class="search-input" type="text" placeholder="Search phases, topics, resources..." oninput="handleSearch(this.value)" id="search-input">
+  </div>
+
+  <!-- CORE TRACK -->
+  <div class="track-section active" id="track-core">
+    <div class="track-header">
+      <div class="track-icon purple">🧠</div>
+      <div>
+        <div class="track-title">Track 1 — Core AI</div>
+        <div class="track-desc">The foundations that let you read papers, implement models from scratch, and reason from first principles. Non-negotiable for the researcher half of this roadmap.</div>
+      </div>
+    </div>
+    <div class="track-actions">
+      <button class="action-btn" onclick="expandAll('core')">Expand all</button>
+      <button class="action-btn" onclick="collapseAll('core')">Collapse all</button>
+    </div>
+    <div class="phase-list core" id="phases-core"></div>
+  </div>
+
+  <!-- APPLIED TRACK -->
+  <div class="track-section" id="track-applied">
+    <div class="track-header">
+      <div class="track-icon green">⚙️</div>
+      <div>
+        <div class="track-title">Track 2 — Applied AI</div>
+        <div class="track-desc">The practitioner stack. Build real systems, ship to production, and develop the engineering judgment that separates junior from senior AI engineers.</div>
+      </div>
+    </div>
+    <div class="track-actions">
+      <button class="action-btn" onclick="expandAll('applied')">Expand all</button>
+      <button class="action-btn" onclick="collapseAll('applied')">Collapse all</button>
+    </div>
+    <div class="phase-list applied" id="phases-applied"></div>
+  </div>
+
+  <!-- RESEARCH TRACK -->
+  <div class="track-section" id="track-research">
+    <div class="track-header">
+      <div class="track-icon amber">🔭</div>
+      <div>
+        <div class="track-title">Track 3 — Research</div>
+        <div class="track-desc">Runs in parallel with Core AI from phase 3 onward. The goal is not to become an academic — it's to be an engineer who can originate ideas, not just implement them.</div>
+      </div>
+    </div>
+    <div class="track-actions">
+      <button class="action-btn" onclick="expandAll('research')">Expand all</button>
+      <button class="action-btn" onclick="collapseAll('research')">Collapse all</button>
+    </div>
+    <div class="phase-list research" id="phases-research"></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>AI Engineer & Researcher Roadmap · Built for <strong style="color:var(--text2)">The AI Stack</strong> · 18–24 months · <a href="#">Enigmax Labs</a></p>
+</footer>
+
+<button class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" id="to-top">↑</button>
+
+<script>
+const DATA = {
+  core: [
+    {
+      num:1, title:"Math foundations", meta:"2–4 weeks",
+      why:"Every paper you'll ever read is written in linear algebra and probability. Without this, you're reading code without knowing the language. Don't skip it.",
+      topics:[
+        {title:"Linear algebra",detail:"Vectors, matrices, dot products, eigenvalues, SVD"},
+        {title:"Calculus",detail:"Derivatives, chain rule, partial derivatives, gradients"},
+        {title:"Probability & stats",detail:"Distributions, Bayes' theorem, MLE, information theory"},
+        {title:"Optimization basics",detail:"Loss surfaces, convexity, saddle points"}
+      ],
+      tags:["3Blue1Brown","Gilbert Strang","Khan Academy"],
+      milestone:"Can derive backpropagation by hand and explain cross-entropy loss without looking it up."
+    },
+    {
+      num:2, title:"Python + scientific stack", meta:"2–3 weeks",
+      why:"Not just syntax — fluency. You should be able to implement a paper in Python faster than you can explain it in English.",
+      topics:[
+        {title:"Python fluency",detail:"OOP, decorators, generators, type hints, dataclasses"},
+        {title:"NumPy",detail:"Vectorization, broadcasting, einsum notation"},
+        {title:"Pandas",detail:"Data manipulation, cleaning, merging, groupby"},
+        {title:"Matplotlib / Seaborn",detail:"Visualization for analysis and debugging"}
+      ],
+      tags:["fast.ai","Karpathy micrograd","numpy docs"],
+      milestone:"Implement a neural net in pure NumPy — no frameworks. Backprop, gradient descent, the works."
+    },
+    {
+      num:3, title:"Classical ML", meta:"2–3 weeks",
+      why:"The conceptual vocabulary of ML — loss functions, overfitting, regularization, hyperparameters — lives here. Don't call this 'fine-tuning'; it's model selection and optimization.",
+      topics:[
+        {title:"Supervised learning",detail:"Linear/logistic regression, SVMs, decision trees"},
+        {title:"Unsupervised learning",detail:"Clustering, PCA, dimensionality reduction"},
+        {title:"Model evaluation",detail:"Train/val/test splits, cross-validation, metrics"},
+        {title:"Sklearn + pipelines",detail:"End-to-end ML pipelines, preprocessing, grid search"}
+      ],
+      tags:["Sklearn docs","ISLR textbook","StatQuest"],
+      milestone:"Build an end-to-end ML pipeline from raw data to deployed model with proper evaluation. No shortcuts."
+    },
+    {
+      num:4, title:"Deep learning", meta:"4–6 weeks",
+      why:"The substrate everything else is built on. PyTorch fluency is non-negotiable — you'll use it to implement every architecture from here forward.",
+      topics:[
+        {title:"ANN from scratch",detail:"Forward pass, backprop, optimizers (SGD, Adam, AdamW)"},
+        {title:"CNNs",detail:"Convolutions, pooling, ResNets, BatchNorm"},
+        {title:"RNNs / LSTMs",detail:"Sequence modeling, vanishing gradient, attention precursors"},
+        {title:"PyTorch fluency",detail:"Autograd, DataLoaders, training loops, GPU, debugging"}
+      ],
+      tags:["Karpathy Neural Nets Zero to Hero","fast.ai Part 1","d2l.ai"],
+      milestone:"Implement a ResNet and an LSTM from scratch in PyTorch. Train on a real dataset. Debug the training curves."
+    },
+    {
+      num:5, title:"Transformer architecture", meta:"3–4 weeks",
+      why:"The single most important architecture in AI right now. Go deep — not just 'attention is all you need' but why every design decision was made.",
+      topics:[
+        {title:"Self-attention",detail:"Q/K/V, scaled dot-product, masking, complexity"},
+        {title:"Multi-head attention",detail:"Parallel heads, projection, concatenation"},
+        {title:"Positional encoding",detail:"Sinusoidal, learned, RoPE, ALiBi"},
+        {title:"Full transformer stack",detail:"LayerNorm, FFN, residuals, pre-norm vs post-norm"}
+      ],
+      tags:["Annotated Transformer","Jay Alammar","Karpathy makemore"],
+      milestone:"Implement a GPT-2 class transformer from scratch. Train a character-level LM. Understand every line."
+    },
+    {
+      num:6, title:"Transformer variants + modern architectures", meta:"2–3 weeks",
+      why:"The field moves fast. You need to recognize and reason about architectural differences — not just run HuggingFace code.",
+      topics:[
+        {title:"Encoder-only",detail:"BERT, RoBERTa — bidirectional, masked LM"},
+        {title:"Decoder-only",detail:"GPT family — causal, autoregressive generation"},
+        {title:"Encoder-decoder",detail:"T5, BART — seq2seq tasks"},
+        {title:"MoE + SSMs",detail:"Mixture of Experts, Mamba, hybrid architectures"}
+      ],
+      tags:["HuggingFace model cards","Yannic Kilcher","Papers with Code"],
+      milestone:"Explain the architectural tradeoffs of BERT vs GPT vs T5 vs Mamba to a non-specialist. Then read the original papers."
+    },
+    {
+      num:7, title:"LLMs — pretraining + scaling", meta:"3–4 weeks",
+      why:"This is where you understand what frontier labs actually do. Pretraining is the moat. Understanding it separates serious engineers from API consumers.",
+      topics:[
+        {title:"Pretraining objectives",detail:"Next-token prediction, masked LM, span corruption"},
+        {title:"Data pipelines",detail:"Tokenization (BPE, SentencePiece), data mixture, deduplication"},
+        {title:"Scaling laws",detail:"Chinchilla compute-optimal, emergent capabilities"},
+        {title:"Infrastructure basics",detail:"Tensor/pipeline/data parallelism, mixed precision, FSDP"}
+      ],
+      tags:["Chinchilla paper","GPT-4 tech report","LLaMA papers"],
+      milestone:"Read Chinchilla paper and the LLaMA-2 paper. Summarize the data and scaling decisions made. Critically evaluate them."
+    },
+    {
+      num:8, title:"Alignment — RL, RLHF, DPO", meta:"3–4 weeks",
+      why:"This is how every frontier model you use is actually trained. RL is also the substrate of agents. Missing this means not understanding half of what matters.",
+      topics:[
+        {title:"RL fundamentals",detail:"MDPs, policy gradient, PPO, reward modeling"},
+        {title:"RLHF pipeline",detail:"SFT → reward model → PPO, InstructGPT"},
+        {title:"DPO / ORPO",detail:"Direct preference optimization, offline RL for LLMs"},
+        {title:"Constitutional AI",detail:"Anthropic's RLAIF approach, self-critique"}
+      ],
+      tags:["InstructGPT paper","DPO paper","Spinning Up RL"],
+      milestone:"Implement a toy RLHF loop: SFT a small model, train a reward model, run PPO. Understand where it can fail."
+    },
+    {
+      num:9, title:"Fine-tuning (all methods)", meta:"2–3 weeks",
+      why:"One consolidated block — not scattered across three places. Covers everything from full fine-tune to parameter-efficient methods to preference tuning.",
+      topics:[
+        {title:"Full fine-tuning",detail:"When to use it, catastrophic forgetting, compute cost"},
+        {title:"LoRA / QLoRA",detail:"Low-rank adaptation, quantization, rank selection"},
+        {title:"SFT pipeline",detail:"Dataset formatting, instruction templates, chat format"},
+        {title:"DPO / ORPO in practice",detail:"Building preference datasets, training stability"}
+      ],
+      tags:["LoRA paper","QLoRA paper","Axolotl","Unsloth"],
+      milestone:"Fine-tune a 7B model on a custom task with QLoRA. Evaluate it properly against a baseline. Document what changed."
+    },
+    {
+      num:10, title:"Evaluation — first-class discipline", meta:"2–3 weeks",
+      why:"Evals are how you know if anything you build actually works. This is criminally underrated. Senior engineers obsess over evals. Junior engineers eyeball outputs.",
+      topics:[
+        {title:"Benchmark design",detail:"What makes a good eval, contamination, saturation"},
+        {title:"LLM-as-judge",detail:"Pairwise evals, G-Eval, self-consistency, bias in judges"},
+        {title:"Human eval design",detail:"Annotation frameworks, inter-rater agreement, sampling"},
+        {title:"Eval frameworks",detail:"EleutherAI lm-eval, HELM, Braintrust, custom harnesses"}
+      ],
+      tags:["HELM paper","G-Eval paper","Braintrust docs"],
+      milestone:"Build a custom eval harness for a task you care about. Run it on 3 different models. Present findings with confidence intervals."
+    },
+    {
+      num:11, title:"Deployment + optimization", meta:"2–3 weeks",
+      why:"A model that can't serve production traffic at acceptable cost is a research artifact. Inference optimization is an engineering discipline in its own right.",
+      topics:[
+        {title:"Quantization",detail:"INT8, INT4, GPTQ, AWQ, bitsandbytes"},
+        {title:"Inference serving",detail:"vLLM, TGI, TensorRT-LLM, KV cache"},
+        {title:"Speculative decoding",detail:"Draft models, acceptance rates, latency tradeoffs"},
+        {title:"Deployment patterns",detail:"Batch vs streaming, load balancing, autoscaling"}
+      ],
+      tags:["vLLM docs","FlashAttention","GPTQ paper"],
+      milestone:"Deploy a fine-tuned model with vLLM. Profile its throughput and latency. Optimize it with quantization and measure the delta."
+    }
+  ],
+  applied: [
+    {
+      num:1, title:"LLM APIs + SDK fluency", meta:"1–2 weeks",
+      why:"Start here the moment you're through Core AI phase 3. Building is the best way to learn. Go raw first — understand what the abstractions are hiding.",
+      topics:[
+        {title:"OpenAI + Anthropic SDKs",detail:"Messages API, streaming, token counting, error handling"},
+        {title:"Raw HTTP calls",detail:"Understand the wire format — don't rely on SDK magic"},
+        {title:"Open source models",detail:"HuggingFace transformers, Ollama for local inference"},
+        {title:"Model selection",detail:"Capability vs cost tradeoffs, context windows, rate limits"}
+      ],
+      tags:["Anthropic docs","OpenAI docs","HuggingFace"],
+      milestone:"Build a multi-model wrapper that routes requests to different providers based on task type and cost. No LangChain."
+    },
+    {
+      num:2, title:"Prompt engineering", meta:"1–2 weeks",
+      why:"Not just a beginner skill — serious prompt engineering is system design. How you structure context, roles, and instructions determines reliability at scale.",
+      topics:[
+        {title:"System prompt design",detail:"Role framing, persona, output constraints, format control"},
+        {title:"Chain-of-thought",detail:"CoT, self-consistency, step-back prompting"},
+        {title:"Few-shot design",detail:"Example selection, format consistency, contrastive examples"},
+        {title:"Prompt testing",detail:"A/B testing prompts, regression suites, edge case coverage"}
+      ],
+      tags:["Anthropic prompt engineering guide","DSPY","PromptLayer"],
+      milestone:"Build a prompt evaluation pipeline. A/B test 5 prompt variants on a real task. Report results with statistical rigor."
+    },
+    {
+      num:3, title:"Structured outputs + tool/function calling", meta:"1–2 weeks",
+      why:"This is the backbone of every production agent and data pipeline. JSON mode, tool use, and structured extraction are not optional — they are the interface between LLMs and systems.",
+      topics:[
+        {title:"Function calling",detail:"Tool schemas, parallel tool use, error handling"},
+        {title:"Structured extraction",detail:"Pydantic + Instructor, JSON mode, schema validation"},
+        {title:"Multi-step tool use",detail:"Chaining tool calls, state accumulation across turns"},
+        {title:"Reliability patterns",detail:"Retry logic, fallbacks, output validation loops"}
+      ],
+      tags:["Instructor library","Anthropic tool use docs","Pydantic"],
+      milestone:"Build a structured data extraction pipeline that takes unstructured documents and outputs validated Pydantic models. 95%+ accuracy."
+    },
+    {
+      num:4, title:"RAG — retrieval-augmented generation", meta:"2–3 weeks",
+      why:"RAG is the most deployed LLM pattern in production. Go deeper than tutorials — understand why retrieval fails and how to fix it.",
+      topics:[
+        {title:"Embeddings + vector DBs",detail:"Dense vs sparse, cosine similarity, Chroma, Pinecone, Qdrant"},
+        {title:"Chunking strategies",detail:"Semantic, sliding window, document hierarchy"},
+        {title:"Advanced retrieval",detail:"Hybrid search, reranking (Cohere, cross-encoders), HyDE"},
+        {title:"RAG evaluation",detail:"Faithfulness, answer relevance, context recall — RAGAS"}
+      ],
+      tags:["RAGAS","LlamaIndex","Qdrant docs"],
+      milestone:"Build a RAG pipeline, evaluate it with RAGAS, identify the weakest component, improve it, and show the delta. Document everything."
+    },
+    {
+      num:5, title:"Orchestration frameworks", meta:"1–2 weeks",
+      why:"Learn the abstractions but don't become dependent on them. They change fast. Understanding them lets you know when to use them and when to go raw.",
+      topics:[
+        {title:"LangChain",detail:"Chains, retrievers, memory — know what it does under the hood"},
+        {title:"LlamaIndex",detail:"Document ingestion, query engines, agent tools"},
+        {title:"Custom orchestration",detail:"When and why to skip frameworks entirely"},
+        {title:"DSPY",detail:"Programmatic prompt optimization, signatures, teleprompters"}
+      ],
+      tags:["LangChain docs","LlamaIndex docs","DSPY paper"],
+      milestone:"Re-implement your RAG pipeline in raw Python (no LangChain). Compare performance, latency, and maintainability. Know the tradeoffs."
+    },
+    {
+      num:6, title:"AI agents", meta:"3–4 weeks",
+      why:"Agents are the direction everything is moving. This is where applied AI and Core AI (especially RL) reconnect — agent design is systems design.",
+      topics:[
+        {title:"Agent architectures",detail:"ReAct, Plan-and-Execute, Reflexion, tree-of-thought"},
+        {title:"Memory systems",detail:"Working memory, episodic memory, knowledge stores"},
+        {title:"Multi-agent systems",detail:"Agent roles, orchestrator/subagent patterns, consensus"},
+        {title:"Agent evals",detail:"Trajectory evaluation, tool-use accuracy, goal completion"}
+      ],
+      tags:["AutoGen","CrewAI","LangGraph","Anthropic agents guide"],
+      milestone:"Build a multi-agent system that completes a real-world task end-to-end (research, write, verify). Evaluate its reliability over 50 runs."
+    },
+    {
+      num:7, title:"Multimodal AI", meta:"2–3 weeks",
+      why:"Vision-language models are shipping in every product category. Audio and video are next. This is no longer optional for a serious AI engineer.",
+      topics:[
+        {title:"Vision-language models",detail:"GPT-4V, Claude vision, LLaVA, PaliGemma"},
+        {title:"Multimodal pipelines",detail:"Image + text inputs, document parsing, chart understanding"},
+        {title:"Audio models",detail:"Whisper, TTS APIs, speech-to-speech patterns"},
+        {title:"Multimodal RAG",detail:"Embedding images, cross-modal retrieval, ColPali"}
+      ],
+      tags:["OpenAI vision docs","Anthropic vision docs","ColPali paper"],
+      milestone:"Build a document intelligence pipeline that handles PDFs with mixed text, tables, and images. Extract structured data from all three."
+    },
+    {
+      num:8, title:"Fine-tuning in practice", meta:"2–3 weeks",
+      why:"Applied fine-tuning is different from the theory in Core AI — it's about dataset construction, iteration speed, and knowing when fine-tuning is even the right answer.",
+      topics:[
+        {title:"Dataset construction",detail:"Synthetic data generation, data flywheel, quality filters"},
+        {title:"Training pipelines",detail:"Axolotl, Unsloth, cloud GPU management, cost estimation"},
+        {title:"When NOT to fine-tune",detail:"Prompt engineering vs RAG vs fine-tune decision framework"},
+        {title:"Post-training evals",detail:"Regression testing, capability probing, benchmark comparison"}
+      ],
+      tags:["Axolotl","Unsloth","Modal","Together AI"],
+      milestone:"Fine-tune a model for a specific vertical task (e.g. legal, medical). Show it beats a prompted frontier model on your eval suite."
+    },
+    {
+      num:9, title:"LLMOps + production systems", meta:"3–4 weeks",
+      why:"Production AI is 10x harder than demo AI. This is where engineering discipline separates the people who ship from the people who prototype.",
+      topics:[
+        {title:"Observability",detail:"Tracing (LangSmith, Langfuse, Braintrust), logging, alerting"},
+        {title:"Evals in production",detail:"Online evals, shadow mode testing, A/B model experiments"},
+        {title:"Guardrails + safety",detail:"Input/output filtering, PII detection, jailbreak defense"},
+        {title:"Cost optimization",detail:"Caching (semantic cache), model routing, prompt compression"}
+      ],
+      tags:["Langfuse","Braintrust","LangSmith","Guardrails AI"],
+      milestone:"Deploy a production LLM system with full observability, automated evals on every deployment, and a rollback mechanism. Document the architecture."
+    },
+    {
+      num:10, title:"Safety, red-teaming + responsible deployment", meta:"1–2 weeks",
+      why:"Not optional for the researcher track. Understanding failure modes and adversarial inputs is part of building robust systems — and it matters for operating in regulated domains.",
+      topics:[
+        {title:"Red-teaming",detail:"Jailbreaks, prompt injection, adversarial inputs, systematic testing"},
+        {title:"Bias + fairness evals",detail:"Demographic parity, representation audits, fairness metrics"},
+        {title:"Hallucination mitigation",detail:"Grounding, citations, factuality evals, abstention"},
+        {title:"Regulatory awareness",detail:"EU AI Act basics, GDPR for AI, sector-specific compliance"}
+      ],
+      tags:["Anthropic usage policies","NIST AI RMF","AI Safety fundamentals"],
+      milestone:"Conduct a red-team exercise on your own deployed system. Document 10 failure modes. Implement mitigations for the top 3."
+    }
+  ],
+  research: [
+    {
+      num:1, title:"Paper reading methodology", meta:"Ongoing from Core phase 5",
+      why:"Most people read papers wrong. There's a system — and once you have it, you can extract the core idea of most papers in 20 minutes.",
+      topics:[
+        {title:"The 3-pass method",detail:"Skim → understand → critique. Never start with the math."},
+        {title:"What to look for",detail:"Problem setup, key insight, experimental design, ablations"},
+        {title:"Paper annotation",detail:"Margin notes, idea connections, open questions"},
+        {title:"Paper implementation",detail:"The real test of understanding — can you reproduce key results?"}
+      ],
+      tags:["How to read a paper (Keshav)","Connected Papers","Semantic Scholar"],
+      milestone:"Read and implement one foundational paper per week for 8 weeks. Start with: Attention Is All You Need, GPT-2, LoRA, InstructGPT, RLHF, DPO."
+    },
+    {
+      num:2, title:"Mechanistic interpretability", meta:"After Core phase 5–6",
+      why:"The field asking 'what is the model actually doing internally?' It's the most scientifically rigorous part of AI research right now — and the most underexplored commercially.",
+      topics:[
+        {title:"Circuits framework",detail:"Features, neurons, attention heads as algorithms"},
+        {title:"Superposition",detail:"Polysemanticity, feature geometry, sparse autoencoders"},
+        {title:"Activation patching",detail:"Causal interventions, path patching, locating facts"},
+        {title:"SAE training",detail:"Sparse autoencoders for feature extraction, monosemanticity"}
+      ],
+      tags:["Anthropic interpretability team","TransformerLens","Neel Nanda","ARENA"],
+      milestone:"Complete ARENA mech interp modules. Reproduce one result from an Anthropic or EleutherAI interpretability paper."
+    },
+    {
+      num:3, title:"Scaling laws + emergent behavior", meta:"After Core phase 7",
+      why:"Scaling laws are the closest thing AI has to a theoretical foundation right now. Understanding them is understanding why frontier models are built the way they are.",
+      topics:[
+        {title:"Chinchilla scaling",detail:"Compute-optimal training, token-to-parameter ratios"},
+        {title:"Emergent capabilities",detail:"Phase transitions, grokking, in-context learning theory"},
+        {title:"Data scaling",detail:"Quality vs quantity tradeoffs, data mixing laws"},
+        {title:"Inference scaling",detail:"Test-time compute, o1/o3 paradigm, chain-of-thought scaling"}
+      ],
+      tags:["Chinchilla paper","Grokking paper","Pythia suite","Olmo"],
+      milestone:"Train a series of small models at different scales. Fit a scaling law curve. Predict performance of a 10x larger model. Check the prediction."
+    },
+    {
+      num:4, title:"AI safety + alignment research", meta:"After Core phase 8",
+      why:"For the researcher track, this isn't optional ethics reading — it's where some of the most technically interesting open problems live.",
+      topics:[
+        {title:"Scalable oversight",detail:"Debate, amplification, weak-to-strong generalization"},
+        {title:"Reward hacking",detail:"Specification gaming, Goodhart's law, reward model collapse"},
+        {title:"Interpretability for safety",detail:"Deceptive alignment, anomaly detection, circuit breaking"},
+        {title:"Constitutional AI",detail:"Anthropic's approach, RLAIF, self-critique pipelines"}
+      ],
+      tags:["Anthropic alignment team","ARC Evals","AI Safety fundamentals course"],
+      milestone:"Read 10 alignment papers. Write a 2-page critical summary of the open problem you find most tractable. Publish it on The AI Stack."
+    },
+    {
+      num:5, title:"Novel architecture exploration", meta:"From Core phase 6 onward",
+      why:"The researcher track ultimately needs you to be able to identify what's missing in current architectures and have a view on what might work better.",
+      topics:[
+        {title:"SSMs (Mamba, S4)",detail:"Linear recurrence, selective state spaces, vs attention"},
+        {title:"Mixture of Experts",detail:"Sparse routing, load balancing, capacity factors"},
+        {title:"Efficient attention",detail:"FlashAttention, linear attention, sliding window"},
+        {title:"Architecture ablations",detail:"How to run controlled architecture experiments at small scale"}
+      ],
+      tags:["Mamba paper","Switch Transformer","FlashAttention 2","MegaByte"],
+      milestone:"Implement Mamba from scratch. Compare its performance vs a transformer on a sequence task. Write up the tradeoffs in a structured post."
+    },
+    {
+      num:6, title:"Original contribution pathway", meta:"12–18 months in",
+      why:"The end goal of the research track: contributing something new. Doesn't need to be a published paper — a rigorous blog post, a well-documented experiment, or a new eval benchmark all count.",
+      topics:[
+        {title:"Finding open problems",detail:"Reading limitations sections, attending NeurIPS/ICLR"},
+        {title:"Experiment design",detail:"Controlled ablations, baselines, statistical significance"},
+        {title:"Scientific writing",detail:"Abstract, intro, method, experiments, discussion structure"},
+        {title:"Public research",detail:"Blog posts, GitHub releases, Twitter/X dissemination"}
+      ],
+      tags:["NeurIPS","ICLR","arXiv","The AI Stack"],
+      milestone:"Publish one original contribution — an experiment, a benchmark, or a rigorous replication study — with full code and writeup."
+    }
+  ]
+};
+
+const TOTALS = { core: 11, applied: 10, research: 6 };
+let completed = { core: new Set(), applied: new Set(), research: new Set() };
+let activeTrack = 'core';
+
+// Load saved state
+try {
+  const saved = localStorage.getItem('rm-progress');
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    Object.keys(parsed).forEach(k => { completed[k] = new Set(parsed[k]); });
+  }
+} catch(e) {}
+
+function saveState() {
+  try {
+    const obj = {};
+    Object.keys(completed).forEach(k => { obj[k] = [...completed[k]]; });
+    localStorage.setItem('rm-progress', JSON.stringify(obj));
+  } catch(e) {}
+}
+
+function renderPhases(track) {
+  const container = document.getElementById(`phases-${track}`);
+  container.innerHTML = '';
+  DATA[track].forEach(p => {
+    const isDone = completed[track].has(p.num);
+    const card = document.createElement('div');
+    card.className = `phase-card ${track}${isDone ? ' completed' : ''}`;
+    card.id = `card-${track}-${p.num}`;
+    card.innerHTML = `
+      <div class="phase-head" onclick="toggleCard('${track}',${p.num})">
+        <div class="phase-num-badge">${p.num}</div>
+        <div class="phase-head-text">
+          <div class="phase-head-title">${p.title}</div>
+          <div class="phase-head-meta">${p.meta}</div>
+        </div>
+        <div class="phase-head-right">
+          <button class="done-btn ${isDone?'checked':''}" onclick="toggleDone(event,'${track}',${p.num})" title="Mark complete">✓</button>
+          <span class="chevron">›</span>
+        </div>
+      </div>
+      <div class="phase-body" id="body-${track}-${p.num}">
+        <div class="phase-body-inner">
+          <div class="why-block">${p.why}</div>
+          <div class="section-label">Topics</div>
+          <div class="topics-grid">
+            ${p.topics.map(t=>`<div class="topic-card"><div class="topic-card-title">${t.title}</div><div class="topic-card-detail">${t.detail}</div></div>`).join('')}
+          </div>
+          <div class="section-label">Resources</div>
+          <div class="tags-row">
+            ${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}
+          </div>
+          <div class="section-label">Milestone checkpoint</div>
+          <div class="milestone-block"><strong>Goal</strong>${p.milestone}</div>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+  updateProgress();
+}
+
+function toggleCard(track, num) {
+  const card = document.getElementById(`card-${track}-${num}`);
+  const body = document.getElementById(`body-${track}-${num}`);
+  const isOpen = card.classList.contains('open');
+  if (isOpen) {
+    card.classList.remove('open');
+    body.style.maxHeight = '0';
+  } else {
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+    // Re-measure after inner content is visible
+    setTimeout(() => { body.style.maxHeight = body.scrollHeight + 'px'; }, 10);
+  }
+}
+
+function toggleDone(e, track, num) {
+  e.stopPropagation();
+  const card = document.getElementById(`card-${track}-${num}`);
+  const btn = card.querySelector('.done-btn');
+  if (completed[track].has(num)) {
+    completed[track].delete(num);
+    btn.classList.remove('checked');
+    card.classList.remove('completed');
+  } else {
+    completed[track].add(num);
+    btn.classList.add('checked');
+    card.classList.add('completed');
+  }
+  saveState();
+  updateProgress();
+}
+
+function updateProgress() {
+  ['core','applied','research'].forEach(t => {
+    const done = completed[t].size;
+    const total = TOTALS[t];
+    const pct = total > 0 ? (done / total * 100) : 0;
+    document.getElementById(`prog-${t}`).style.width = pct + '%';
+    document.getElementById(`prog-${t}-label`).textContent = `${done} / ${total} complete`;
+  });
+}
+
+function switchTrack(track) {
+  document.querySelectorAll('.track-section').forEach(s => s.classList.remove('active'));
+  document.getElementById(`track-${track}`).classList.add('active');
+  ['core','applied','research'].forEach(t => {
+    const btn = document.getElementById(`btn-${t}`);
+    btn.className = 'nav-btn' + (t === track ? ` active-${t}` : '');
+    // Re-add dot span
+    btn.innerHTML = `<span class="nav-dot"></span> ${t === 'core' ? 'Core AI' : t === 'applied' ? 'Applied AI' : 'Research'}`;
+  });
+  activeTrack = track;
+  document.getElementById('search-input').value = '';
+  showAll();
+}
+
+function expandAll(track) {
+  DATA[track].forEach(p => {
+    const card = document.getElementById(`card-${track}-${p.num}`);
+    const body = document.getElementById(`body-${track}-${p.num}`);
+    card.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+    setTimeout(() => { body.style.maxHeight = body.scrollHeight + 400 + 'px'; }, 50);
+  });
+}
+
+function collapseAll(track) {
+  DATA[track].forEach(p => {
+    const card = document.getElementById(`card-${track}-${p.num}`);
+    const body = document.getElementById(`body-${track}-${p.num}`);
+    card.classList.remove('open');
+    body.style.maxHeight = '0';
+  });
+}
+
+function showAll() {
+  ['core','applied','research'].forEach(t => {
+    DATA[t].forEach(p => {
+      const card = document.getElementById(`card-${t}-${p.num}`);
+      if (card) card.style.display = '';
+    });
+  });
+}
+
+function handleSearch(query) {
+  const q = query.toLowerCase().trim();
+  if (!q) { showAll(); return; }
+  ['core','applied','research'].forEach(t => {
+    DATA[t].forEach(p => {
+      const card = document.getElementById(`card-${t}-${p.num}`);
+      if (!card) return;
+      const searchable = [
+        p.title, p.why, p.milestone,
+        ...p.topics.map(x => x.title + ' ' + x.detail),
+        ...p.tags
+      ].join(' ').toLowerCase();
+      card.style.display = searchable.includes(q) ? '' : 'none';
+    });
+  });
+  // Show tracks that have results
+  ['core','applied','research'].forEach(t => {
+    const section = document.getElementById(`track-${t}`);
+    const hasVisible = DATA[t].some(p => {
+      const c = document.getElementById(`card-${t}-${p.num}`);
+      return c && c.style.display !== 'none';
+    });
+    if (hasVisible) section.classList.add('active');
+    else if (t !== activeTrack) section.classList.remove('active');
+  });
+}
+
+// Scroll to top button
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('to-top');
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// Init
+renderPhases('core');
+renderPhases('applied');
+renderPhases('research');
+</script>
+</body>
+</html>
