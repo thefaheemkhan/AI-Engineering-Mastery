@@ -4,7 +4,10 @@
 This roadmap consists of three parallel tracks: **Core AI**, **Applied AI**, and **Research**.
 
 Link: https://ai-engineer-researcher-roadmap.netlify.app/
-Forward Deployed Engineer Link: https://aifde.netlify.app/
+
+Link Forward Deployed Engineer Link: https://aifde.netlify.app/
+
+Link Claude Mastery Roadmap: https://claude-mastery-roadmap.netlify.app/
 
 ## How to use this roadmap
 Core AI and Applied AI run sequentially but can be interleaved from phase 3 onward. The Research track starts once you're inside transformers. You don't need to finish Core AI before starting Applied AI — start building basic apps at phase 3, and go deep on the theory in parallel.
