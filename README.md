@@ -14,9 +14,10 @@
 
 > **A complete, structured path covering Core AI foundations and Applied AI engineering —**  
 > **every topic expanded into the exact subtopics, tools, and frameworks you need to master.**
-> **[AI Engineering Mastery Link: ](https://ai-engineering-mastery-101.netlify.app/)**
 
 <br/>
+
+**[AI Engineering Mastery Link: ](https://ai-engineering-mastery-101.netlify.app/)**
 
 </div>
 
