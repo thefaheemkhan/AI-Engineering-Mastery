@@ -17,7 +17,7 @@
 
 <br/>
 
-**[AI Engineering Mastery Website Link ](https://ai-engineering-mastery-101.netlify.app/)** 👆
+**[AI Engineering Mastery Website Link 👆](https://ai-engineering-mastery-101.netlify.app/)** 👆
 
 </div>
 
