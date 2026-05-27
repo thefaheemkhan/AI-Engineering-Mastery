@@ -5,7 +5,7 @@
 
 <br/>
 
-[![Track 01 — Core AI](https://img.shields.io/badge/Track%2001-Core%20AI%20%E2%80%94%207%20Topics-00d4ff?style=for-the-badge&labelColor=0f1114)](https://github.com)
+[![Track 01 — Core AI ](https://img.shields.io/badge/Track%2001-Core%20AI%20%E2%80%94%207%20Topics-00d4ff?style=for-the-badge&labelColor=0f1114)](https://github.com)
 [![Track 02 — Applied AI](https://img.shields.io/badge/Track%2002-Applied%20AI%20%E2%80%94%206%20Topics-ffb340?style=for-the-badge&labelColor=0f1114)](https://github.com)
 [![Subtopics](https://img.shields.io/badge/Subtopics-80%2B-00e5a0?style=for-the-badge&labelColor=0f1114)](https://github.com)
 [![Tools & Frameworks](https://img.shields.io/badge/Tools%20%26%20Frameworks-40%2B-ffffff?style=for-the-badge&labelColor=0f1114)](https://github.com)
