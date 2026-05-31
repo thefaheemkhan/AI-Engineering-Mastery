@@ -23,7 +23,7 @@
 
 ---
 
-## 📌 Table of Contents
+## 📌 Table of Contents:
 
 ### 🔵 Track 01 — Core AI
 | # | Topic |
