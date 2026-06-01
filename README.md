@@ -36,7 +36,7 @@
 | [06](#06--large-language-models) | Large Language Models |
 | [07](#07--fine-tuning) | Fine-tuning |
 
-### 🟡 Track 02 — Applied AI
+### 🟡 Track 02 — Applied AI:
 | # | Topic |
 |---|-------|
 | [01](#01--llm-apis--prompt-engineering) | LLM APIs & Prompt Engineering |
