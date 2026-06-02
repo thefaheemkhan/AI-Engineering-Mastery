@@ -4,3 +4,5 @@ YouTube - Bprop
 Twitter - Posts and Updates
 Github - Github Pages Website, along with Notes & Projects
 LinkedIn - Projects
+
+ANN-CNN-RNN-NLP
